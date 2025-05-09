@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".TasksFragment">
 
@@ -18,7 +19,7 @@
             android:id="@+id/task_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter a task name"
+            android:hint="Task name is..."
             android:inputType="text"
             android:text="@={viewModel.newTaskName}"/>
 
@@ -27,8 +28,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Save Task"
-            android:onClick="@{() -> viewModel.addTask()}"/>
+            android:background="#1AE2D8"
+            android:onClick="@{() -> viewModel.addTask()}"
+            android:shadowColor="#C33B11"
+            android:text="Create task"
+            android:textColor="#44C51F"
+            android:textColorHighlight="#643535"
+            android:textColorHint="#D3ACAC"
+            android:textColorLink="#09ED12"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:iconTint="#D30D0D"
+            app:rippleColor="#AF0D0D"
+            app:strokeColor="#FF1493" />
 
         <TextView
             android:id="@+id/tasks"
